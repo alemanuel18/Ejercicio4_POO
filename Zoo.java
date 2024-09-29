@@ -316,7 +316,7 @@ public class Zoo {
         
 
         while (verificador==false) {
-            System.out.println("\nQue tipo de pelaje tiene el mamifero\n1. Solitario\n2. Grupal\n3. Familiar\n4. Jerárquico");
+            System.out.println("\nQue tipo interaccion tiene el primate\n1. Solitario\n2. Grupal\n3. Familiar\n4. Jerárquico");
             eleccionUsuarioS=teclado.nextLine();
 
             try { 
@@ -325,16 +325,16 @@ public class Zoo {
                     System.out.println("Ingrese una de las opciones del menu");
                 }else{
                     if (eleccionUsuarioi==1) {
-                        eleccionUsuarioS="Corto";
+                        eleccionUsuarioS="Solitario";
                         verificador=true;   
                     } else if (eleccionUsuarioi==2) {
-                        eleccionUsuarioS="Largo";
+                        eleccionUsuarioS="Grupal";
                         verificador=true;   
                     } else if (eleccionUsuarioi==3) {
-                        eleccionUsuarioS="Grueso";
+                        eleccionUsuarioS="Familiar";
                         verificador=true;   
                     } else if (eleccionUsuarioi==4) {
-                        eleccionUsuarioS="Ausente";
+                        eleccionUsuarioS="Jerarquico";
                         verificador=true;   
                     }
                 }
