@@ -36,7 +36,7 @@ public class Zoo {
 
                     Felino felino=new Felino(nombre, habitad, ingresarint(1), funcionamiento.calcularCostoMantenimientoM(tamano, alimetacionDiaria, dieta), pesoKg, ingresarint(2), peligroExtincion(), menu3(), ingresarint(3), dieta, tamano, alimetacionDiaria, areaHabitad, ingresarString(3), ingresarString(4), ingresarfloat(2), ingresarfloat(3), ingresarfloat(4));
 
-                    System.out.println(funcionamiento.mostrarInformacionAnimalEspecifico(nombre));
+                    System.out.println(funcionamiento.mostrarInformacionAnimalEspecificoF(felino));
 
                 if (funcionamiento.revisarExistenciaHabitad(habitad)) {
                     System.out.println("El habitad ya existe");
@@ -48,7 +48,7 @@ public class Zoo {
                         System.out.println("No se agego al felino");
                     }
                 }else{
-                    System.out.println("El habitad no existe.\nEl costo de construccion es de "+funcionamiento.costoConstruccionArrea(areaHabitad));
+                    System.out.println("El habitad no existe.\nEl costo de construccion es de Q"+funcionamiento.costoConstruccionArrea(areaHabitad));
                     eleccion3=menu8();
                     if (eleccion3==1) {
                         funcionamiento.agregarHabitad(habitad);
@@ -69,7 +69,7 @@ public class Zoo {
 
                     Primate primate=new Primate(nombre, habitad, ingresarint(1), funcionamiento.calcularCostoMantenimientoM(tamano, alimetacionDiaria, dieta), pesoKg, ingresarint(2), peligroExtincion(), menu3(), ingresarint(3), dieta, tamano, alimetacionDiaria, areaHabitad, ingresarString(5), menu6(), menu7(), ingresarfloat(5));
 
-                    System.out.println(funcionamiento.mostrarInformacionAnimalEspecifico(nombre));
+                    System.out.println(funcionamiento.mostrarInformacionAnimalEspecificoP(primate));
 
                     if (funcionamiento.revisarExistenciaHabitad(habitad)) {
                         System.out.println("El habitad ya existe");
@@ -81,7 +81,7 @@ public class Zoo {
                             System.out.println("No se agego al primate");
                         }
                     }else{
-                        System.out.println("El habitad no existe.\nEl costo de construccion es de "+funcionamiento.costoConstruccionArrea(areaHabitad));
+                        System.out.println("El habitad no existe.\nEl costo de construccion es de Q"+funcionamiento.costoConstruccionArrea(areaHabitad));
                         eleccion3=menu8();
                         if (eleccion3==1) {
                             funcionamiento.agregarHabitad(habitad);
@@ -94,7 +94,11 @@ public class Zoo {
                 }
                 eleccion=menu();
             }else if (eleccion==2) {
-                System.out.println(funcionamiento.mostrarInformacionAnimalEspecifico(seleccionarAnimal(funcionamiento)));
+                if (funcionamiento.getFelinos().isEmpty() && funcionamiento.getPrimates().isEmpty()) {
+                    System.out.println("No existe ningun animal");
+                }else{
+                    System.out.println(funcionamiento.mostrarInformacionAnimalEspecifico(seleccionarAnimal(funcionamiento)));
+                }
                 eleccion=menu();
             }
         }

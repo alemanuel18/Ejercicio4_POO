@@ -95,19 +95,29 @@ public class Funsionamiento {
     public String mostrarInformacionAnimalEspecifico(String nombre) {
         for (Felino felino : felinos) {
             if (felino.getNombreCientifico().equalsIgnoreCase(nombre)) {
-                return "\nAnimal: " + felino.getNombreCientifico() + "\n" + "Tipo: Felino\n" + "Costo de mantenimiento mensual: $" + felino.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + felino.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + felino.getAlimetacionDiaria() + " kg\n";
+                return "\nAnimal: " + felino.getNombreCientifico() + "\n" + "Tipo: Felino\n" + "Costo de mantenimiento mensual: Q" + felino.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + felino.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + felino.getAlimetacionDiaria() + " kg\n";
             }
         }
     
         for (Primate primate : primates) {
             if (primate.getNombreCientifico().equalsIgnoreCase(nombre)) {
-                return "\nAnimal: " + primate.getNombreCientifico() + "\n" +"Tipo: Primate\n" + "Costo de mantenimiento mensual: $" + primate.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + primate.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + primate.getAlimetacionDiaria() + " kg\n";
+                return "\nAnimal: " + primate.getNombreCientifico() + "\n" +"Tipo: Primate\n" + "Costo de mantenimiento mensual: Q" + primate.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + primate.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + primate.getAlimetacionDiaria() + " kg\n";
             }
         }
     
         return "No se deberia poder ver esto";
     }
+
+    public String mostrarInformacionAnimalEspecificoF(Felino felino) {
+
+        return "\nAnimal: " + felino.getNombreCientifico() + "\n" + "Tipo: Felino\n" + "Costo de mantenimiento mensual: Q" + felino.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + felino.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + felino.getAlimetacionDiaria() + " kg\n";
+    }
     
+    public String mostrarInformacionAnimalEspecificoP(Primate felino) {
+
+        return "\nAnimal: " + felino.getNombreCientifico() + "\n" + "Tipo: Primate\n" + "Costo de mantenimiento mensual: Q" + felino.getCostoMantenimietno() + "\n" + "Tamaño del recinto: " + felino.getAreaHabitad() + " metros cuadrados\n" + "Cantidad diaria de comida: " + felino.getAlimetacionDiaria() + " kg\n";
+    }
+
     public boolean revisarExistenciaHabitad(String nombre){
         for(String habitadS : habitad){
             if (habitadS.equals(nombre)) {
